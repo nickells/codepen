@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack --watch & http-server",
     "build": "webpack && open index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "kill-live-reload": "kill -9 $(lsof -ti tcp:35729)",
+    "kill-http-server": "kill -9 $(lsof -ti tcp:8080)"
   },
   "author": "",
   "license": "ISC",

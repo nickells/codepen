@@ -1,12 +1,12 @@
 const LiveReloadPlugin = require('webpack-livereload-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const path = require('path')
+
 const LiveReloader = new LiveReloadPlugin()
 
 module.exports = [{
   context: path.join(__dirname, 'src'),
   entry: './scripts/index.js',
-  // watch: true,
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -32,7 +32,6 @@ module.exports = [{
 {
   context: path.join(__dirname, 'src'),
   entry: './styles/index.less',
-  watch: true,
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'styles.css',
@@ -49,6 +48,6 @@ module.exports = [{
   },
   plugins: [
     new ExtractTextPlugin('styles.css'),
-    LiveReloader
+    LiveReloader,
   ],
 }]
