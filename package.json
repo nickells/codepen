@@ -9,7 +9,7 @@
     "kill-live-reload": "kill -9 $(lsof -ti tcp:35729)",
     "kill-http-server": "kill -9 $(lsof -ti tcp:8080)"
   },
-  "author": "",
+  "author": "Nick Ellsworth",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^3.19.0",
@@ -23,7 +23,6 @@
   "dependencies": {
     "css-loader": "^0.28.4",
     "raw-loader": "^0.5.1",
-    "save-dev": "^2.0.0",
     "webpack-livereload-plugin": "^0.11.0"
   }
 }
